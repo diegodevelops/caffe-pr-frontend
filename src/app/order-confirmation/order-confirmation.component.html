@@ -1,0 +1,22 @@
+<div class="container order-confirmation-container">
+    
+    <!-- If no checkout, show error message -->
+    <app-message-box message="No checkout was done"
+                     emoji="😕"
+                     *ngIf="checkout.cart.length === 0"
+                     >
+    </app-message-box>
+
+    <!-- Else, show confirmation message -->
+    <app-message-box emoji="🎉"
+                     *ngIf="checkout.cart.length > 0"
+                     >
+                     <h3>Success!</h3>
+                     <br>
+                     <p>Thank you, <b>{{ checkout.fullName }}</b>!</p>
+                     <p>Your <b>{{ prettyTotal }}</b> order is confirmed!</p>
+                     <p>Please allow 1-3 business day(s) for shipping.</p>
+    </app-message-box>
+
+    <br><br>
+</div>

@@ -1,0 +1,29 @@
+<div class="container product-details-container">
+
+    <!-- If no product found, show error message -->
+    <app-message-box message="Oops! We didn't find product with id: {{ id }}"
+                     emoji="😕"
+                     *ngIf="!product"
+    ></app-message-box>
+
+    <!-- Else, show details -->
+    <div class="row" *ngIf="product != undefined">
+        <div class="col-md-6">
+            <img src="{{ product.url }}" class="img-fluid rounded" alt="{{ product.name }}">
+        </div>
+        <div class="col-md-6">
+            <div class="d-flex flex-column justify-content-center h-100">
+                <h1>{{ product.name }}</h1>
+                    <h5>${{ product.price }}</h5>
+                    <p>{{ product.description }}</p>
+                    <div class="product-quantity-container">
+                        <app-product-quantity [product]="product"></app-product-quantity>
+                    </div>
+                    <a routerLink="/" class="product-list-link align-middle">
+                        <i class="bi bi-arrow-left-short"></i> Back to product list
+                    </a>
+            </div>
+        </div>
+    </div>
+    <br><br>
+</div>

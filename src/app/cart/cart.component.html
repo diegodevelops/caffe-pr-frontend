@@ -1,0 +1,47 @@
+<div class="container cart-container ">
+
+    <!-- If cart is empty, show error feedback -->
+    <app-message-box message="Your cart is empty"
+                     emoji="😕"
+                     *ngIf="cart.length === 0"
+                     >
+    </app-message-box>
+
+    <!-- If cart is not empty, show form -->
+    <div *ngIf="cart.length != 0" class="row">
+        <div class="col-md-6 d-flex flex-column gap-5">
+            <app-cart-item *ngFor="let item of cart" [cartItem]="item" (amountChanged)="onAmountChange(item)" (removed)="onRemove(item)"></app-cart-item>
+            <h2>Total: {{ prettyPaymentTotal }}</h2>
+        </div>
+        <div class="col-md-6">
+            <form #form="ngForm" (ngSubmit)="onSubmit()">
+                <h1>Checkout</h1>
+                <br>
+                <label for="fullName" class="form-label">Full name</label>
+                <input name="fullName" type="text" required minlength="5" class="form-control" id="fullName" [(ngModel)]="fullName" />
+                <br> 
+                <label for="address" class="form-label">Address</label>
+                <input name="address" type="text" required minlength="10" class="form-control" id="address" [(ngModel)]="address" />
+                <br>
+                <label for="creditCard" class="form-label">Credit card</label>
+                <input name="creditCard" 
+                       type="text" 
+                       required 
+                       minlength="19" 
+                       inputmode="numeric"
+                       pattern="[0-9\s]{13,19}"
+                       autocomplete="cc-number"
+                       placeholder="xxxx xxxx xxxx xxxx"
+                       class="form-control" 
+                       id="creditCard" 
+                       [(ngModel)]="creditCard" 
+                    />
+                <p class="credit-card-note">We'll never share your payment details with anyone</p>
+                <br>
+                <input class="btn btn-primary"  type="submit" value="Submit" [disabled]="form.invalid" />
+            </form>
+        </div>
+    </div>
+
+    <br><br>
+</div>

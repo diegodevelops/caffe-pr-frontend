@@ -1,0 +1,21 @@
+.product-card {
+    height: 400px;
+}
+
+.product-card img {
+    height: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.arrow-link-container {
+    position: absolute;
+    left: calc(100% - 40px);
+    cursor: pointer;
+}
+
+.arrow-link-container i {
+    font-size: 20px;
+    color: #fff;
+    margin: 10px;
+}

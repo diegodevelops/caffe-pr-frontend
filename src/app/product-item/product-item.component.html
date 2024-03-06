@@ -1,0 +1,15 @@
+<div class="card product-card">
+  <div class="arrow-link-container" routerLink="/products/{{product.id}}">
+    <i class="bi bi-arrow-up-right-square-fill"></i>
+  </div>
+  <img class="card-img-top" 
+       src="{{ product.url }}" 
+       alt="Card image cap" 
+       routerLink="/products/{{product.id}}"
+       >
+  <div class="card-body">
+    <h5 class="card-title">{{ product.name }}</h5>
+    <p class="card-text">{{ product.description }}</p>
+    <app-product-quantity [product]="product"></app-product-quantity>
+  </div>
+  </div>
