@@ -27,4 +27,4 @@ Some oncepts and modules used:
 
 3. Run npm i and npm i --save-dev to install all the dependencies since node_modules is not included in the repo.
 
-4. Run `ng serve --port=3000` to start the app on 0.0.0.0:3000. This will run the app on the ip address 0.0.0.0 and on port 3000. 
+4. Run `ng serve --port=3000` to start the app on 0.0.0.0:3000. This will run the app on the ip address 0.0.0.0 and on port 3000. # caffe-pr-frontend
