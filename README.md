@@ -1,4 +1,4 @@
-# MyAngularStore
+# caffe-pr frontend
 An simple store made with Angular, Typescript and Bootstrap. Includes the most basic functionality:
 
 - Product list page
