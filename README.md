@@ -1,4 +1,4 @@
-# caffe-pr frontend
+# Front-end of CaffePR 
 An simple store made with Angular, Typescript and Bootstrap. Includes the most basic functionality:
 
 - Product list page
