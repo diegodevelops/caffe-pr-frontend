@@ -8,7 +8,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProductDataService {
 
-  private urlPath: string = './assets/data.json'
+  private urlPath: string = 'http://caffe-pr-backend-dev-env.eba-8sg3mprg.us-west-2.elasticbeanstalk.com/products'
+  // private urlPath: string = './assets/data.json'
 
   constructor(private http: HttpClient) { }
 
