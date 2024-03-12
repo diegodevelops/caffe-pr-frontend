@@ -1,0 +1,2 @@
+aws s3 cp --region us-east-2 --recursive --acl public-read ./dist/frontend/browser s3://caffepr-bucket/
+aws s3 cp --region us-east-2 --acl public-read --cache-control="max-age=0, no-cache, no-store, must-revalidate" ./dist/frontend/browser s3://caffepr-bucket/
