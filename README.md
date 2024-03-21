@@ -6,7 +6,7 @@ An simple store made with Angular, Typescript and Bootstrap. Includes the most b
 - Cart page to view and modify it and to checkout
 - Order confirmation page
 
-Some oncepts and modules used:
+Some concepts and modules used:
 
 - Services to separate concerns and make code more clean and modular
 - Bootstrap for styling and icons
